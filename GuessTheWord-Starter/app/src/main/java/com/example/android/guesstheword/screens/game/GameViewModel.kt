@@ -4,11 +4,6 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
-    init {
-        resetList()
-        nextWord()
-        Log.i("GameViewModel", "GameViewModel created!")
-    }
 
     // The current word
     var word = ""
@@ -52,6 +47,12 @@ class GameViewModel : ViewModel() {
                 "bubble"
         )
         wordList.shuffle()
+    }
+
+    init {
+        Log.i("GameViewModel", "GameViewModel created!")
+        resetList()
+        nextWord()
     }
 
     /**
